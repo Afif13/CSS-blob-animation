@@ -5,6 +5,8 @@ From my article: https://css-tricks.com/exploring-the-css-paint-api-blob-animati
 
 Create a blob shapes or animation using a few lines of CSS thanks to the CSS Paint API. All you have to do is to apply a mask and adjust some CSS variables.
 
+#### [Live Demo](https://afif13.github.io/CSS-blob-animation/)
+
 ### How to use
 
 
