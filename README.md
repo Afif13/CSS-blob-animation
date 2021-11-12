@@ -35,10 +35,10 @@ img {
   -webkit-mask:paint(blob);
           mask:paint(blob);
   --n: ..;  /* control the granularity of the blob effect (the number of points) */
-  --t: ..;  /* control the type of the movement (0 = uniform, 1 = random)
+  --t: ..;  /* control the type of the movement (0 = uniform, 1 = random) */
   --na: ..; /* control the nature of the movement */
   --v: ..;  /* to be used in the animation */
-  --b: 0; /* we animate this variable for 0 ..*/
+  --b: 0;   /* we animate this variable for 0 .. */
   transition: --b .5s;
 }
 img:hover {
