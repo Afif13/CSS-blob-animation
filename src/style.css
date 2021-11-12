@@ -1,0 +1,44 @@
+@property --b{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+@property --bo{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+img {
+  cursor:pointer;
+  border-radius:50%;
+  -webkit-mask:paint(blob);
+  transition:--b .5s,--bo .5s;
+}
+
+.h:hover {
+  --b:var(--v)!important
+}
+
+.s:hover {
+  --b:0.1!important;
+  transition:--b .5s cubic-bezier(.5,calc(var(--v)/(-.289*.1)),.5,calc(var(--v)/(.289*.1)));
+}
+.a1 {
+  animation:b1 2s infinite alternate;
+}
+@keyframes b1{
+  20% { --b:25 }
+  50%,90% {--b:50}
+  60% {--b:40}
+}
+.a2 {
+  animation:b2 2s infinite linear;
+}
+@keyframes b2{
+  0% { --b:0 }
+  100% {--b:1}
+}
+.bo:hover {
+  --bo:var(--v);
+}
