@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CSS Paint API: Blob Animation</title>
+  <meta name="description" content="A blob animation created using the CSS Paint API from the Houdini project">
+  <meta name="author" content="Temani Afif">
+
+  <meta property="og:title" content="CSS Paint API: Blob Animation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://afif13.github.io/CSS-blob-animation/">
+  <meta property="og:description" content="A fragmentation effect created using the CSS Paint API from the Houdini project">
+  <meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2021/08/blob-featured-image.png">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<h1>CSS Paint API: Blob Animation</h1>
+<hr>
+<h2>Static elements</h2>
+<img style="--n:20;--t:0;--b:20;--na:0;" src="https://picsum.photos/id/1069/150/150">
+<img style="--n:12;--t:0;--b:10;--na:0;" src="https://picsum.photos/id/1069/150/150">
+<img style="--n:18;--t:1;--b:20;--na:0;--seed:33" src="https://picsum.photos/id/1069/150/150">
+<img style="--n:44;--t:0;--b:30;--na:1;" src="https://picsum.photos/id/1069/150/150">
+<img style="--n:24;--t:1;--b:78;--na:2;--seed:34" src="https://picsum.photos/id/1069/150/150">
+<hr>
+<h2>Hover animations</h2>
+<img class="h" style="--n:26;--t:0;--b:20;--v:0;--na:0;" src="https://picsum.photos/id/1074/150/150">
+<img class="h" style="--n:20;--t:1;--b:0;--v:50;--na:0;--seed:208" src="https://picsum.photos/id/1074/150/150">
+<img class="h" style="--n:30;--t:1;--b:20;--v:-10;--na:0;--seed:566" src="https://picsum.photos/id/1074/150/150">
+<img class="h s" style="--n:40;--t:0;--b:0;--v:10;--na:3;" src="https://picsum.photos/id/1074/150/150">
+<img class="h s" style="--n:50;--t:1;--b:0;--v:20;--na:4;--seed:115" src="https://picsum.photos/id/1074/150/150">
+<hr>
+<h2>keyframes animations</h2>
+<img class="a1" style="--n:50;--t:1;--na:0;--seed:123" src="https://picsum.photos/id/1016/150/150">
+<img class="a1" style="--n:60;--t:0;--na:2;" src="https://picsum.photos/id/1016/150/150">
+<img class="a1" style="--n:12;--t:0;--na:0;" src="https://picsum.photos/id/1016/150/150">
+<img class="a2" style="--n:15;--na:5;--seed:50" src="https://picsum.photos/id/1016/150/150">
+<img class="a2" style="--n:60;--na:5;--seed:50" src="https://picsum.photos/id/1016/150/150">
+<hr>
+<h2>Hover + keyframes animations</h2>
+<img class="a2 bo" style="--n:10;--na:6;--seed:385;--v:20" src="https://picsum.photos/id/1022/150/150">
+<img class="a2 bo" style="--n:8;--na:6;--seed:966;--v:-100" src="https://picsum.photos/id/1022/150/150">
+<img class="a2 bo" style="--n:30;--na:6;--seed:580;--v:50" src="https://picsum.photos/id/1022/150/150">
+<img class="a2 bo" style="--n:40;--na:6;--seed:666;--v:-30" src="https://picsum.photos/id/1022/150/150">
+
+
+<script>
+if(CSS.paintWorklet) {              
+  CSS.paintWorklet.addModule('src/blob.js');
+} else {
+  console.log("Your browser doesn't support the Paint API :(");
+}
+</script>
+</body>
+</html>
